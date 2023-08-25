@@ -119,7 +119,8 @@ function calculadora(numero1, numero2, tipoCalculo){
     //Recebendo os valores dos argumentos da funçao em variaveis locais
     let valor1 = numero1
     let valor2 = numero2
-    let operacao = tipoCalculo
+    let operacao = tipoCalculolo
+    let resultado;
 
     switch(operacao){
         case 'SOMAR':
