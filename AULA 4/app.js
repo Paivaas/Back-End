@@ -77,6 +77,4 @@ entradaDeDados.question("Qual será a operação? [ +  -  /  x] ", function(oper
 
     })
 
-    
-
 })
