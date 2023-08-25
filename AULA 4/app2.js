@@ -3,6 +3,8 @@
 // Autor: Julia Paiva
 // Versão 1.0
 
+//Import da biblioteca de calculoMatematicos
+var calculosMatematicos = require('./modulo/calculosMatematicos.js')
 
 // Biblioteca tipo Scanner (Entarda de dados)
 const { Console } = require('console')
@@ -97,7 +99,7 @@ entradaDeDados.question('Digite o primeiro valor: ', function(numero1){
                     break;
 
                 }*/
-                resultado = calculadora(valor1, valor2, operacao)
+                resultado = calculosMatematicos.calculadora(valor1, valor2, operacao)
 
                 //Validadação da variavél undefined
                 if (resultado){
