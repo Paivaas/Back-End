@@ -22,7 +22,8 @@ function calculadora(produto, pagamento){
         resultado = resultadototal / 4
         
     }else{
-        console.log('valor invalido')
+        console.log('> valor invalido')
+        console.log('') 
     }
 
     return resultado

@@ -15,44 +15,49 @@ var entradaDeDados = readline.createInterface({
     output: process.stdout
 })
 
-// console.log('_________________________________________')
-// console.log('')
-// console.log('Formas de Pagamento: ')
-// console.log('1 | Á vista, com 8% de desconto')
-// console.log('2 | Á vista no cartão, com 4% de desconto')
-// console.log('3 | Em 2x, o preço normla sem juros')
-// console.log('4 | Em 4x, preço acrescido de 8%')
-// console.log('_________________________________________')
-
-
 var calculosLoja = require('./modulo/calculosLoja.js')
 
 entradaDeDados.question("Insira o valor do item: ", function(produto){
         var valorproduto = produto.replace(',', '.')
 
-        console.log('_________________________________________')
-        console.log('')
-        console.log('Formas de de Pagamento: ')
-        console.log('1 | Á vista, com 8% de desconto')
-        console.log('2 | Á vista no cartão, com 4% de desconto')
-        console.log('3 | Em 2x, o preço normla sem juros')
-        console.log('4 | Em 4x, preço acrescido de 8%')
-        console.log('_________________________________________')
-        console.log('')
+        if(isNaN(valorproduto)){
+            console.log('> Valor invalido')
+            console.log('')
+            entradaDeDados.close()
 
-    entradaDeDados.question("Digite o número da forma de pagamento escolhida: ", function(pagamento){
-        let formaPagamento = pagamento
+        }else{
+            console.log('_________________________________________')
+            console.log('')
+            console.log('Formas de de Pagamento: ')
+            console.log('1 | Á vista, com 8% de desconto')
+            console.log('2 | Á vista no cartão, com 4% de desconto')
+            console.log('3 | Em 2x, o preço normla sem juros')
+            console.log('4 | Em 4x, preço acrescido de 8%')
+            console.log('_________________________________________')
+            console.log('')
 
-        resultado = calculosLoja.calculadora(produto, pagamento)
+            entradaDeDados.question("Digite o número correspondente á forma de pagamento escolhida: ", function(pagamento){
+            let formaPagamento = pagamento
 
-                if (resultado){
-                console.log(produto)
-                console.log(resultado)
-                }
+            resultado = calculosLoja.calculadora(produto, pagamento)
 
-                entradaDeDados.close()
- 
+            if (pagamento == 1 || pagamento == 2){
+                console.log('')
+                console.log('O valor do produto é: ' + produto)
+                console.log('O valor final é: ' + resultado)
+                console.log('')
+            }else if(pagamento == 3 || pagamento == 4){
+                console.log('')
+                console.log('O valor do produto é: ' + produto)
+                console.log('O valor de cada parcela é: ' + resultado)
+                console.log('')
+            }
+
+            entradaDeDados.close()
+            
     })
+        }
+
     
 })
 
