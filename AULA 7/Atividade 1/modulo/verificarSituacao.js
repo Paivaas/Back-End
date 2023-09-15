@@ -4,9 +4,9 @@ function verificaSituacao(imc){
     var resultado
 
     if(imc < 18)
-    resultado = console.log(', você está abaixo do peso')
+    resultado = ', você está abaixo do peso'
     else if(imc > 18)
-    resultado = console.log(', você está saudavel')
+    resultado = ', você está saudavel'
 
     return resultado 
 }
