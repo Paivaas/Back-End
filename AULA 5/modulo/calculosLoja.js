@@ -6,12 +6,10 @@ function calculadora(produto, pagamento){
         const desconto = (produto * 8) / 100
         resultado = produto - desconto
     
-
     }else if(pagamento == '2'){
         const desconto = (produto * 4) / 100
         resultado = produto - desconto
         
-
     }else if(pagamento == '3'){
         const parcela = produto / 2
         resultado = parcela

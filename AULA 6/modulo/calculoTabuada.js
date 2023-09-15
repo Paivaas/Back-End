@@ -1,5 +1,3 @@
-
-
 //Função para calcular tabuada
 const calcularTabuada = function (valorTabuada, contadorInicial,contadorFinal){
 
