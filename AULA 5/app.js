@@ -5,6 +5,7 @@
 // Versão 1.0
 
 
+
 const { endianness } = require('os')
 var readline = require('readline') 
 const { isNumberObject } = require('util/types')

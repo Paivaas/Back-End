@@ -1,5 +1,5 @@
 // Objetivo: Calculadora de Media
-// Data: 18.04.2023
+// Data: 18.08.2023
 // Autor: Julia Paiva
 // Versão 1.0
 

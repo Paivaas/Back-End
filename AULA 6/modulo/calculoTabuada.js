@@ -12,7 +12,7 @@ const calcularTabuada = function (valorTabuada, contadorInicial,contadorFinal){
     let status = false
 
     //Validação para organizar os valores (menor e maior)
-    if(contFinal < contInicial){
+    if(Number(contFinal) < Number(contInicial)){
 
         // const valorAuxiliar = contInicial
         // contInicial = contFinal
@@ -35,21 +35,31 @@ const calcularTabuada = function (valorTabuada, contadorInicial,contadorFinal){
         tabuada = Number(tabuada)
 
 
-        //Exemplo usando o while
-        while(contInicial <= contFinal){
+        // //Exemplo usando o while
+        // while(contInicial <= contFinal){
+        //     resultado = tabuada * contInicial
+        //     console.log(tabuada + 'x' + contInicial + '=' + resultado)
+        //     //ou  console.log(`${tabuada} x ${contInicial} = ${resultado}`)
+
+        //     //contInicial = contInicial + 1
+        //     // contInicial+=1
+        //     contInicial++
+                
+        //     status = true
+        // }
+
+        //Exemplo usando o for
+        for(; contInicial <= contFinal; contInicial++){ //Criaçao da variavel, definir ate quantas vezes o const vai acontecer e adcionando o ++
             resultado = tabuada * contInicial
             console.log(tabuada + 'x' + contInicial + '=' + resultado)
-            //ou  console.log(`${tabuada} x ${contInicial} = ${resultado}`)
-
-            //contInicial = contInicial + 1
-            // contInicial+=1
-            contInicial++
-                
             status = true
         }
-
     }
     return status
 
 } 
-calcularTabuada(2,0,10)
+
+ //Chamando a função -- Import do arquivo
+ module.exports = {
+    calcularTabuada       
+}

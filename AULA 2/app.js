@@ -1,6 +1,6 @@
 
 // Objetivo: Manipular entrada e saída de dados para o usuário
-// Data: 04.04.2023
+// Data: 04.08.2023
 // Autor: Julia Paiva
 // Versão 1.0
 
