@@ -1,7 +1,7 @@
 # *Back-End_Projetos* <img src="https://pa1.aminoapps.com/6454/d70fe9741bdcd2bb96c9362818b1e190969d8908_hq.gif" alt="MarineGEO circle logo" style="height: 50px; width:80px;"/>
 
 
-Aula       |‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  Conteúdo‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ 
+Aula       |‎ Conteúdo‎
 ---------  | ------
  1 - 28/07 | Aplicação de conceitos no JavaScript
  2 - 04/08 | Manipulação da entrada e saída de dados para o usuário
