@@ -1,4 +1,4 @@
-// Projeto: Minha calculadora
+// Projeto: Minha Calculadora
 // Data: 11.08.2023
 // Autor: Julia Paiva
 // Versão 1.0
@@ -13,8 +13,6 @@ var entradaDeDados = readline.createInterface({
     output: process.stdout
 })
 
-
-
 console.log("-----------------------------------------------------------------")
 console.log('Bem vindo ao programa CALCULADORA')
 console.log('instruções:')
@@ -22,7 +20,6 @@ console.log('1. Escolha qual operação deseja fazer')
 console.log('2. Preencha abaixo os números que deseja utlizar para a operação')
 console.log("-----------------------------------------------------------------")
 console.log("")
-
 
 entradaDeDados.question("Qual será a operação? [ +  -  /  x] ", function(operador){
     var EscolhaOperador = operador

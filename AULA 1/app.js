@@ -1,3 +1,9 @@
+
+// Objetivo: Cadastrar um usuario
+// Data: 01.07.2023
+// Autor: Julia Paiva
+// Versão 1.0
+
 // Permite exibir uma mensagem no terminal
 console.log('Testando o Node.JS');
 
