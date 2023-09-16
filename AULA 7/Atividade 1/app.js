@@ -1,9 +1,9 @@
-// Objetivo: Calculadora de Imc
+// Objetivo: Calculador Imc
 // Data: 15.09.2023
 // Autor: Julia Paiva
 // Versão 1.0
-//•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°••°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
-//⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆
+//•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°••°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°
+//⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱
 
 
 var readline = require('readline')
@@ -14,6 +14,10 @@ var entradaDeDados = readline.createInterface({
 
 var funcionalidades  = require('./modulo/funcionalidades.js')
 
+
+console.log('')
+console.log('     DESCUBRA SEU IMC')
+console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
 entradaDeDados.question('Digite seu peso: ', function(peso){
     var valorPeso = peso
     
