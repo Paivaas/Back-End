@@ -1,4 +1,4 @@
-# *Back-End_Projetos* <img src="https://pa1.aminoapps.com/6454/d70fe9741bdcd2bb96c9362818b1e190969d8908_hq.gif" alt="MarineGEO circle logo" style="height: 50px; width:80px;"/>
+# *Back-End_Projetos* <img src="https://pa1.aminoapps.com/6454/d70fe9741bdcd2bb96c9362818b1e190969d8908_hq.gif" alt="MarineGEO circle logo" style="height: 10px; width:40px;"/>
 
 
 Aula       |‎ Conteúdo‎
