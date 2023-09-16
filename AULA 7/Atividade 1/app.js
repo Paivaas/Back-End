@@ -2,6 +2,8 @@
 // Data: 15.09.2023
 // Autor: Julia Paiva
 // Versão 1.0
+//•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°••°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•
+//⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆
 
 
 var readline = require('readline')
@@ -10,19 +12,21 @@ var entradaDeDados = readline.createInterface({
     output: process.stdout
 })
 
-var calculoImc = require('./modulo/calcularImc.js')
-var situacaoImc = require('./modulo/verificarSituacao.js')
+var funcionalidades  = require('./modulo/funcionalidades.js')
 
 entradaDeDados.question('Digite seu peso: ', function(peso){
-    var pesoUsuario = Number(peso)
+    var valorPeso = peso
     
     entradaDeDados.question('Digite seu altura: ', function(altura){
-        var alturaUsuario = altura.replace(',', '.')
+        var valorAltura = altura
 
-        imc = calculoImc.calculadoraImc(peso, altura)
-        resultado = situacaoImc.verificaSituacao(imc)
+        imc = funcionalidades.calculadoraImc(peso, altura)
+        resultado = funcionalidades.verificaSituacao(imc)
 
-        console.log('Seu IMC é: ' + imc + resultado)
+        if(imc == undefined)
+            console.log("↻")
+        else
+            console.log('Seu IMC é: ' + imc + resultado)
 
         entradaDeDados.close()
     })
