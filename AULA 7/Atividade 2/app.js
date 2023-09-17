@@ -255,7 +255,6 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                                 }
                                             }
 
-
                                         }
 
                                     })
@@ -268,8 +267,7 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
 
                     })
 
-                })
-                
+                })              
             
             })
         
