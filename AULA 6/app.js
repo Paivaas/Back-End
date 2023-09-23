@@ -6,7 +6,6 @@
 var calculoTabuada = require('./modulo/calculoTabuada.js')
 var readline = require('readline')
 
-var readline = require('readline')
 var entradaDeDados = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -22,7 +21,7 @@ entradaDeDados.question('Digite uma tabuada: ', function(valorTabuda){
             let contadorFinal = valorFinal
 
             //Chama a funcao da tabuada encaminhando os calores que o usuario digitou
-            console.log(calculoTabuada.calcularTabuada(valorTabuda, contadorInicial, contadorFinal))
+            console.log(resultadoMedia = calculoTabuada.calcularTabuada(valorTabuda, contadorInicial, contadorFinal))
 
         })
     })

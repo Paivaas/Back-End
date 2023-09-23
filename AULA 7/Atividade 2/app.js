@@ -1,11 +1,13 @@
 // Objetivo: Sistema de cadastro em uma faculdade
 // Data: 15.09.2023
 // Autor: Julia Paiva
-// Versão 1.0
+// Versão 2.0
 //•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°••°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°
 //⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱
 
+var funcionalidades = require('./modulo/funcionalidades.js')
 var readline = require('readline')
+
 var entradaDeDados = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -33,7 +35,6 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                         var nomeDisciplina = disciplina
                         console.log('')
 
-
                         // Entrada de Notas
                         entradaDeDados.question('Nota 1: ' , function(nota1){
                             var n1 = nota1
@@ -46,7 +47,6 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
 
                                     entradaDeDados.question('Nota 4: ' , function(nota4){
                                         var n4 = nota4
-
                                         
                                         // validaçoes
                                         if(nota1 == '' || nota2 == '' || nota3 == '' || nota4 == '' ){
@@ -62,217 +62,70 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                         }else if(nota1 > 100 || nota2 > 100 || nota3 > 100 || nota4 > 100 || nota1 < 0 || nota2 < 0 || nota3 < 0 || nota4 < 0){
 
                                             console.log('ERR0 | A nota informada exede o valor maximo ou minimo de dados')
-                                        
 
                                         }else{
 
-                                            let media = ( Number(nota1)+Number(nota2)+Number(nota3)+Number(nota4))/4
+                                            var resultadoMedia = funcionalidades.media(nota1,nota2,nota3,nota4) 
+                                            var identificarA = funcionalidades.verificarSexoA(sexoAluno)
+                                            var identificarP = funcionalidades.verificarSexoP(sexoProfessor)
+                                            var situacao = funcionalidades.situacaoMedia(resultadoMedia, sexoA)
                                             
-                                            if (media > 70){
+                                            if (resultadoMedia >= 70){
 
                                                 console.log('')
-                                                console.log('  RELATORIO ESTUDANTIL')
-                                                 console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
+                                                console.log('                BOLETIM ESCOLAR')
+                                                console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
+                                                console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacao + ' na disciplina ' + disciplina.toUpperCase()+'.')
+                                                console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
+                                                console.log(identificarP + nomeProfessor.toUpperCase()+'.')
+                                                console.log('Notas do aluno: '+n1+','+n2+','+n3+','+n4+'.')
+                                                console.log('Media final: '+resultadoMedia)
+                                                console.log('')
+                                                entradaDeDados.close()
+                                                
 
-                                                if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('A aluna ' + nomeA + ' foi aprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('A aluna ' + nomeA + ' foi aprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas o aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('O aluno ' + nomeA + ' foi aprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('O aluno ' + nomeA + ' foi aprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-                                                }
-
-                                            }else if(media >= 50 && media < 69){
+                                            }else if(resultadoMedia >= 50 && resultadoMedia < 69){
 
                                                 entradaDeDados.question('Nota do Exame: ' , function(exame){
                                                     var notaExame = exame
+                                                    var situacaoE = funcionalidades.situacaoExame(resultadoMedia, notaExame, sexoA)
 
-                                                    resultadoPosExame = (Number(media) + Number(exame))/2
-                                                   
-                                                    if(resultadoPosExame >= 60){
-                                                        console.log('')
-                                                    console.log('  RELATORIO ESTUDANTIL')
-                                                    console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
-
-                                                    if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'F'){
-                                                        console.log('A aluna ' + nomeA + ' foi aprovada na disciplina ' + disciplina)
-                                                        console.log('Curso:' + nomeCurso)
-                                                        console.log('Professora: '+ nomeProfessor)
-                                                        console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                        console.log('media final:' + media)
-                                                        console.log('media final com exame:' + resultadoPosExame)
-                                                        console.log('')
-                                                        entradaDeDados.close()
-
-                                                    }else if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'M'){
-                                                        console.log('A aluna ' + nomeA + ' foi aprovada na disciplina ' + disciplina)
-                                                        console.log('Curso:' + nomeCurso)
-                                                        console.log('Professor: '+ nomeProfessor)
-                                                        console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                        console.log('media final:' + media)
-                                                        console.log('media final com exame:' + resultadoPosExame)
-                                                        console.log('')
-                                                        entradaDeDados.close()
-
-                                                    }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'F'){
-                                                        console.log('O aluno ' + nomeA + ' foi aprovado na disciplina ' + disciplina)
-                                                        console.log('Curso:' + nomeCurso)
-                                                        console.log('Professora: '+ nomeProfessor)
-                                                        console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                        console.log('media final:' + media)
-                                                        console.log('media final com exame:' + resultadoPosExame)
-                                                        console.log('')
-                                                        entradaDeDados.close()
-
-                                                    }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'M'){
-                                                        console.log('O aluno ' + nomeA + ' foi aprovado na disciplina ' + disciplina)
-                                                        console.log('Curso:' + nomeCurso)
-                                                        console.log('Professor: '+ nomeProfessor)
-                                                        console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                        console.log('media final:' + media)
-                                                        console.log('media final com exame:' + resultadoPosExame)
-                                                        console.log('')
-                                                        entradaDeDados.close()
-                                                    }
-                                                }else{
-                                                console.log('')
-                                                console.log('  RELATORIO ESTUDANTIL')
-                                                console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
-
-                                                if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('A aluna ' + nomeA + ' foi reprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                    console.log('media final:' + media)
-                                                    console.log('media final com exame:' + resultadoPosExame)
+                                                    console.log('')
+                                                    console.log('                BOLETIM ESCOLAR')
+                                                    console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
+                                                    console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacaoE + ' na disciplina ' + disciplina.toUpperCase()+'.')
+                                                    console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
+                                                    console.log(identificarP + nomeProfessor.toUpperCase()+'.')
+                                                    console.log('Notas do aluno: '+n1+','+n2+','+n3+','+n4+','+exame+'.')
+                                                    console.log('Media: '+resultadoMedia)
+                                                    console.log('Nota final com Exame: '+ exame)
                                                     console.log('')
                                                     entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('A aluna ' + nomeA + ' foi reprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                    console.log('media final:' + media)
-                                                    console.log('media final com exame:' + resultadoPosExame)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('O aluno ' + nomeA + ' foi reprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                    console.log('media final:' + media)
-                                                    console.log('media final com exame:' + resultadoPosExame)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('O aluno ' + nomeA + ' foi reprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 + ',' + exame)
-                                                    console.log('media final:' + media)
-                                                    console.log('media final com exame:' + resultadoPosExame)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-                                                }
-                                                }
                                                 
                                                 })
 
-                                            }else if(media < 50){
+                                            }else if(resultadoMedia < 50){
+
                                                 console.log('')
-                                                console.log('  RELATORIO ESTUDANTIL')
-                                                 console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
-
-                                                if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('A aluna ' + nomeA + ' foi reprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'F' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('A aluna ' + nomeA + ' foi reprovada na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'F'){
-                                                    console.log('O aluno ' + nomeA + ' foi reprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professora: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-
-                                                }else if(sexoA.toUpperCase() == 'M' && sexoP.toUpperCase() == 'M'){
-                                                    console.log('O aluno ' + nomeA + ' foi reprovado na disciplina ' + disciplina)
-                                                    console.log('Curso:' + nomeCurso)
-                                                    console.log('Professor: '+ nomeProfessor)
-                                                    console.log('Notas do aluno: ' + nota1 + ',' + nota2 + ',' + nota3 + ',' + nota4 )
-                                                    console.log('media final:' + media)
-                                                    console.log('')
-                                                    entradaDeDados.close()
-                                                }
+                                                console.log('                BOLETIM ESCOLAR')
+                                                console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
+                                                console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacao + ' na disciplina ' + disciplina.toUpperCase()+'.')
+                                                console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
+                                                console.log(identificarP + nomeProfessor.toUpperCase()+'.')
+                                                console.log('Notas do aluno: '+n1+','+n2+','+n3+','+n4+'.')
+                                                console.log('Media final: '+resultadoMedia)
+                                                console.log('')
+                                                entradaDeDados.close()
+                                              
                                             }
-
                                         }
-
-                                    })
-                                    
-                                })
-          
+                                    })                               
+                                })          
                             })
-
                         })
-
                     })
-
-                })              
-            
-            })
-        
-        })
-    
+                })                         
+            })       
+        }) 
     })
-
 })
