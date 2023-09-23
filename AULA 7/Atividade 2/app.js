@@ -49,7 +49,7 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                         var n4 = nota4
                                         
                                         // validaçoes
-                                        if(nota1 == '' || nota2 == '' || nota3 == '' || nota4 == '' ){
+                                        if(nota1 == '' || nota2 == '' || nota3 == '' || nota4 == '' || nomeDisciplina == '' ||nomeCurso == ''|| sexoProfessor == '' || sexoAluno == '' || nomeProfessor == '' || nomeAluno == ''){
 
                                             console.log('ERRO | É obrigatorio a entrada de todos os dados') 
                                             entradaDeDados.close()
@@ -65,6 +65,7 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
 
                                         }else{
 
+                                            // Importações no modulo
                                             var resultadoMedia = funcionalidades.media(nota1,nota2,nota3,nota4) 
                                             var identificarA = funcionalidades.verificarSexoA(sexoAluno)
                                             var identificarP = funcionalidades.verificarSexoP(sexoProfessor)
