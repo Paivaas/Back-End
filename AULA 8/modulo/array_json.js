@@ -82,10 +82,19 @@ const percorrendoArray = function(){
     let listaDeprotudos = ['Mouse','Teclado','Monitor','Impressora', 'Mouse Pad','Gabinete','Processador','HD']
 
     // Fazendo uma repetição, iniciando em 0 e fazendo ele percorrer o Array ate o ultimo indice
-    let cont = 0
-    while(cont < listaDeprotudos.length){
+    // While
+    // let cont = 0
+    // while(cont < listaDeprotudos.length){
+    //     console.log('Nome do produto: '+listaDeprotudos[cont])
+    //     cont ++
+    // }
+
+    // FOR
+    for(let cont=0; cont < listaDeprotudos.length; cont++){
         console.log('Nome do produto: '+listaDeprotudos[cont])
-        cont ++
     }
+
+    //FOREaCH
+    
 }
 percorrendoArray()
