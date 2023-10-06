@@ -6,7 +6,9 @@
 //⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱
 
 
+var funcionalidades = require('./modulo/funcionalidades.js')
 var readline = require('readline')
+
 var entradaDeDados = readline.createInterface({
     input: process.stdin,
     output: process.stdout
@@ -24,25 +26,9 @@ entradaDeDados.question('Digite o número a ser fatorado: ', function(fatorial){
         console.log('')
         entradaDeDados.close()
     }else{
-
-        let calculo = ''
-        let resultado = 1;
-
-        for (let i = numero; i >= 1; i--) {
-        resultado *= i;
-        calculo += i == 1 ? `${i}` : `${i}x`;
-        }
-        console.log('O fatorial de '+fatorial+" é "+calculo+' = '+resultado);
-
-        console.log('')
+        var fatorial = funcionalidades.calculoFatorial(numero) 
+        console.log("")
         entradaDeDados.close()
     }
 })
 
-
-// const dadosFatoriais = function (fatorial, resultado) {
-
-//     let vfatorial = fatorial
-//     let vResu = fatorial
-    
-// }
