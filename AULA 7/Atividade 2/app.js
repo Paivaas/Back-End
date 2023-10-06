@@ -74,7 +74,9 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                             if (resultadoMedia >= 70){
 
                                                 console.log('')
-                                                console.log('                BOLETIM ESCOLAR')
+
+                                               console.log('               RELATORIO ESCOLAR')
+
                                                 console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
                                                 console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacao + ' na disciplina ' + disciplina.toUpperCase()+'.')
                                                 console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
@@ -92,7 +94,8 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                                     var situacaoE = funcionalidades.situacaoExame(resultadoMedia, notaExame, sexoA)
 
                                                     console.log('')
-                                                    console.log('                BOLETIM ESCOLAR')
+
+                                                    console.log('               RELATORIO ESCOLAR')
                                                     console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
                                                     console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacaoE + ' na disciplina ' + disciplina.toUpperCase()+'.')
                                                     console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
@@ -108,7 +111,7 @@ entradaDeDados.question('Nome do aluno: ', function(nomeA){
                                             }else if(resultadoMedia < 50){
 
                                                 console.log('')
-                                                console.log('                BOLETIM ESCOLAR')
+                                                console.log('               RELATORIO ESCOLAR')
                                                 console.log('━━━━━━━━━━━━━━━━━━━━━ • ✿ • ━━━━━━━━━━━━━━━━━━━━━')
                                                 console.log(identificarA + nomeA.toUpperCase() + ' foi ' + situacao + ' na disciplina ' + disciplina.toUpperCase()+'.')
                                                 console.log('Curso: ' + nomeCurso.toUpperCase()+'.')
