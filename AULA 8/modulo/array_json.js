@@ -9,8 +9,6 @@
 // [] -> Representa a estrutura Array (começa no inidice 0)
 // {} -> Representa a estrutura JSON
 
-
-
 console.log('')
 const introducaoArray = function(){
 
