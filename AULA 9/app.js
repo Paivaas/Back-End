@@ -38,11 +38,80 @@ const manipulandoArrayJson = function(){
     arrayContatos.forEach(function (dados){
         console.log( "Nome: "+dados.nome)
         console.log( "Email: "+dados.email)
-        console.log( "Data de nascimento: "+dados.data_nascimento)
         console.log( "Telefone: "+dados.telefone)
+
+        // Tratamento para validar a impressao dos valores
+        if(dados.data_nascimento != undefined){
+            console.log( "Data de nascimento: "+dados.data_nascimento)
+        }
         console.log('')
      })
+
+
 
 }
 
 manipulandoArrayJson()
+
+
+const produtosArrayJson = function(){
+    let listaCores = [
+
+                        {id: 1, nome: 'Branco'},
+                        {id: 2, nome: 'Preto'},
+                        {id: 3, nome: 'Cinza'},
+                        {id: 4, nome: 'Rosa'},
+                        {id: 5, nome: 'Vemelho'},
+                        {id: 6, nome: 'Azul'},
+                    ]
+
+    let listaMarca = [
+
+                        {id: 1, nome: 'Dell'},
+                        {id: 2, nome: 'Lenovo'},
+                        {id: 3, nome: 'Apple'},
+                        {id: 4, nome: 'Logitec'},
+                        {id: 5, nome: 'Positivo'},
+                        {id: 6, nome: 'Multilaser'},
+                    ]
+
+    let listaCategorias = [
+
+                        {id: 1, nome: 'Hardware', descricao: 'Peças de PC'},
+                        {id: 2, nome: 'Perifericos', descricao: 'Conectores'},
+                        {id: 3, nome: 'Gamer', descricao: 'Para jogos'},
+                        {id: 4, nome: 'Acessorios', descricao: 'Decorações'},
+                    ]
+
+
+    //Cria um objeto do tipo JSON para guardra os produtos
+    let jsonProdutos = {}
+
+    //Cria um objeto do tipo ARRAY para guardra os produtos
+    let arrayProdutos = []
+
+    //Objeto para criar os pordutos
+    let produto1 = {id: 1, 
+                    nome: 'Mouse', 
+                    descricao: 'Mouse optico com fio', 
+                    categoria: listaCategorias[1],
+                    marca: listaMarca[0],
+                    cor: [
+                        listaCores[1],listaCores[2],listaCores[3]
+                        ]
+                    }
+
+    let produto2 = {id: 2, 
+                    nome: 'Teclado', 
+                    descricao: 'Teclado com fio', 
+                    categoria: listaCategorias[1],
+                    marca: listaMarca[4],
+                    cor: listaCores
+                    }
+
+    console.log(produto1)
+    
+
+}
+
+produtosArrayJson()

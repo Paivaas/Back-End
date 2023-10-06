@@ -24,6 +24,11 @@ entradaDeDados.question('Digite o número inicial ', function(nInicial){
             console.log('> ERRO | O valor inicial deve ser menor que o final') 
         else if(numeroInicial == numeroFinal)
             console.log('> ERRO | O valor inicial deve ser dierente do final') 
+        else{
+
+
+            
+        }
         
     })
 
