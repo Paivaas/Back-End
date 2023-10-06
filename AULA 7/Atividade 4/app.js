@@ -17,20 +17,24 @@ console.log('   CALCULADOR FATORIAL ')
 console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
 
 entradaDeDados.question('Digite o número a ser fatorado: ', function(fatorial){
-    var resultado = fatorial;
+    var numero = fatorial;
 
     if(fatorial == 0){
         console.log('ERRO | Não é possivel calcular o fatorial de 0')
         console.log('')
         entradaDeDados.close()
     }else{
-        for (var i = 1; i < fatorial; i++) {
-            resultado *= i;
+
+        let calculo = ''
+        let resultado = 1;
+
+        for (let i = numero; i >= 1; i--) {
+        resultado *= i;
+        calculo += i == 1 ? `${i}` : `${i}x`;
         }
-        console.log('Fatorial de '+fatorial+ ':  '+resultado);
+        console.log('O fatorial de '+fatorial+" é "+calculo+' = '+resultado);
+
         console.log('')
-
-
         entradaDeDados.close()
     }
 })
