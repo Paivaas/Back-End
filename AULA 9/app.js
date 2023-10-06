@@ -50,8 +50,7 @@ const manipulandoArrayJson = function(){
 
 
 }
-
-manipulandoArrayJson()
+// manipulandoArrayJson()
 
 
 const produtosArrayJson = function(){
@@ -109,9 +108,40 @@ const produtosArrayJson = function(){
                     cor: listaCores
                     }
 
-    console.log(produto1)
-    
+    let produto3 = {id: 2, 
+                        nome: 'Monitor', 
+                        descricao: 'Monitor 20`', 
+                        categoria: listaCategorias[0],
+                        marca: listaMarca[4],
+                        cor: [
+                            listaCores[1],listaCores[2],listaCores[3]
+                            ]
+                    }
+
+
+    arrayProdutos.push(produto1, produto2, produto3)
+    jsonProdutos.produtos = arrayProdutos
+    // jsonProdutos.count =  arrayProdutos.length
+    // jsonProdutos.status = 200
+
+    return jsonProdutos
+}
+
+// produtosArrayJson()
+
+const ExibindoArrayJson = function(jsonProdutos){
+    let arrayProdutos = jsonProdutos
+   
+   console.log(jsonProdutos)
+
+   const oi = arrayProdutos.forEach(function (dados){
+    console.log( "Nome: "+dados.nome)
+    })
 
 }
 
-produtosArrayJson()
+
+xy = produtosArrayJson()
+ExibindoArrayJson(xy)
+
+
