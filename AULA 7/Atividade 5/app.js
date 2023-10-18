@@ -1,3 +1,10 @@
+// Objetivo: Criar um sistema que gerencie números pares e ímpares
+// Data: 22.09.2023
+// Autor: Julia Paiva
+// Versão 1.0
+//•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°••°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°•°
+//⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱∘──────∘⊰⋅⋅⋅⋆⋆⋅⋅⋅⊱
+
 
 var readline = require('readline')
 var funcionalidades = require('./modulo/funcionalidades.js')
