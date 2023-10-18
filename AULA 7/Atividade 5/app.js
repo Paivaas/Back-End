@@ -1,5 +1,7 @@
 
 var readline = require('readline')
+var funcionalidades = require('./modulo/funcionalidades.js')
+
 
 var entradaDeDados = readline.createInterface({
     input: process.stdin,
@@ -10,26 +12,16 @@ console.log('')
 console.log(' GERENCIADOR DE NÚMEROS  ')
 console.log('━━━━━━━━━ • ✿ • ━━━━━━━━━')
 
-entradaDeDados.question('Digite o número inicial ', function(nInicial){
-    var numeroInicial = nInicial;
+entradaDeDados.question('Digite o primeiro valor: ', function(valorIni){
+    vI = valorIni
 
-    entradaDeDados.question('Digite o número final: ', function(nFinal){
-        var numeroFinal = nFinal;
-        
-        if(nInicial < 0 || nFinal < 0 || nFinal > 500 || nFinal > 500 || nInicial < 0 || nInicial < 0 || nInicial > 500 || nInicial > 500)
-            console.log('> ERRO | O número inserido exede o valor minimo ou maximo')
-        else if(nInicial == '' || nFinal == '')
-            console.log('> ERRO | É obrigatorio a entrada de todos os dados') 
-        else if(numeroInicial > numeroFinal)
-            console.log('> ERRO | O valor inicial deve ser menor que o final') 
-        else if(numeroInicial == numeroFinal)
-            console.log('> ERRO | O valor inicial deve ser dierente do final') 
-        else{
+    entradaDeDados.question('Digite o segundo valor: ', function(valorFin){
+      vF = valorFin
 
+      entradaDeDados.question('[1 - Par][2 - Impares][3 - Ambos] ', function(decisaoUsuario){
+          decisaoU = decisaoUsuario
 
-            
-        }
-        
+          funcionalidades.verificarParEImpar(Number(vI), Number(vF), decisaoU)
+      })
     })
-
 })
