@@ -65,7 +65,6 @@ const produtosArrayJson = function(){
                     ]
 
     let listaMarca = [
-
                         {id: 1, nome: 'Dell'},
                         {id: 2, nome: 'Lenovo'},
                         {id: 3, nome: 'Apple'},
@@ -80,7 +79,7 @@ const produtosArrayJson = function(){
                         {id: 2, nome: 'Perifericos', descricao: 'Conectores'},
                         {id: 3, nome: 'Gamer', descricao: 'Para jogos'},
                         {id: 4, nome: 'Acessorios', descricao: 'Decorações'},
-                    ]
+                         ]
 
 
     //Cria um objeto do tipo JSON para guardra os produtos
@@ -127,21 +126,18 @@ const produtosArrayJson = function(){
     return jsonProdutos
 }
 
-// produtosArrayJson()
+produtosArrayJson()
 
 const ExibindoArrayJson = function(jsonProdutos){
     let arrayProdutos = jsonProdutos
    
    console.log(jsonProdutos)
 
-   const oi = arrayProdutos.forEach(function (dados){
-    console.log( "Nome: "+dados.nome)
-    })
+//    const oi = arrayProdutos.forEach(function (dados){
+//     console.log( "Nome: "+dados.nome)
+//     })
 
 }
 
-
 xy = produtosArrayJson()
 ExibindoArrayJson(xy)
-
-
