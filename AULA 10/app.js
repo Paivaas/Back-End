@@ -33,7 +33,7 @@ app.use((request, response, next)=>{
 
     app.use(cors())
 
-    //
+
     next();
 })
 
@@ -43,9 +43,32 @@ app.get('/estados/sigla', cors(), async function(request, response, next){
     let estados = controleListaEstados.getListaDeEstados()
     response.json(estados)
     response.status(200)
+
+
 })
 
  //Executa a API e faz el ficar aguardando requisições
 app.listen(8080, function(){
     console.log('api funcionando e aguardando requisições')
+
 })
+
+//Executa a API  e faz ela ficar aguradando requisições
+
+app.get('/capitais/estado', cors(), async function(request, response, next){
+    //Recebe paramtros via query, que são variaveis encaminhadas na URL da requisição
+    let siglaEstado = request.query.uf
+
+    let controleDadosCapital = require('./modulo/funcionalidades.js')
+    let dadosCapital = controleDadosCapital.getCapitalEstado(siglaEstado)
+
+    if(dadosCapital){
+        response.json(dadosCapital)
+        response.status(200)
+    }else{
+        response.status(404)
+        response.json({erro: "não foi possivel encontrar um item"})
+    }
+    console.log(siglaEstado)
+})
+

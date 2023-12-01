@@ -22,10 +22,10 @@ getListaDeEstados()
 
 function getDadosEstado(sigla){
     
-    const jsonInfos = {}
-    let status = false
+    const julia  = sigla.toUpperCase()
+    const estados =  dados.estadosCidades.estados
 
-    arrayEstado.forEach(function(estado) {
+    estados.forEach(function(estado) {
         if(estado.sigla == nomeEstado.toUpperCase()){
             jsonInfos.uf = estado.sigla
             jsonInfos.descricao = estado.nome
@@ -35,6 +35,8 @@ function getDadosEstado(sigla){
             status = true
         }
     })
+
+    let status = false
     if(status)
         return jsonInfos
     else
