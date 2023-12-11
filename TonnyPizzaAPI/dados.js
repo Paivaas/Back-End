@@ -91,8 +91,8 @@ var categorias = {
         },
         {
             id: 2,
-            nome: "Sobremesas",
-            foto: "iconSobremesas.svg"
+            nome: "Pizzas doces",
+            foto: "iconPizzaD.svg"
         },
         {
             id: 3,
@@ -101,25 +101,27 @@ var categorias = {
         },
         {
             id: 4,
-            nome: "Pizzas doces",
-            foto: "iconPizzaD.svg"
+            nome: "Sobremesas",
+            foto: "iconSobremesas.svg"
         },
         {
             id: 5,
-            nome: "Sorvetes artesanais",
-            foto: "iconSorvetes.svg"
+            nome: "Bebidas",
+            foto: "iconBebidas.svg"
         },
         {
             id: 6,
-            nome: "Bebidas",
-            foto: "iconBebidas.svg"
+            nome: "Sorvetes",
+            foto: "iconSorvetes.svg"
         }
     ]
 }
+console.log(categorias.dados[1].nome)
 var produtos = {
     pizzas: [
         {
             id: 1,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaFrango",
             nome: "Frango com Catupiry",
             preco: "34,90",
@@ -146,6 +148,7 @@ var produtos = {
         },
         {
             id: 2,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaMargherita",
             nome: "Margherita Tradicional",
             preco: "29,90",
@@ -172,6 +175,7 @@ var produtos = {
         },
         {
             id: 3,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaCalabresa",
             nome: "Calabresa Especial",
             preco: "31,90",
@@ -198,6 +202,7 @@ var produtos = {
         },
         {
             id: 4,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizza4Queijos",
             nome: "Quatro Queijos",
             preco: "36,90",
@@ -224,6 +229,7 @@ var produtos = {
         },
         {
             id: 5,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaPepperoni",
             nome: "Pepperoni Picante",
             preco: "35,90",
@@ -250,6 +256,7 @@ var produtos = {
         },
         {
             id: 6,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaBacon",
             nome: "Bacon Lovers",
             preco: "31,90",
@@ -276,6 +283,7 @@ var produtos = {
         },
         {
             id: 7,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaVegetariana",
             nome: "Vegetariana Suprema",
             preco: "33,90",
@@ -302,6 +310,7 @@ var produtos = {
         },
         {
             id: 8,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaPortuguesa",
             nome: "Portuguesa Tradicional",
             preco: "35,90",
@@ -328,6 +337,7 @@ var produtos = {
         },
         {
             id: 9,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaFrutos",
             nome: "Frutos do Mar Especial",
             preco: "31,90",
@@ -354,6 +364,7 @@ var produtos = {
         },
         {
             id: 10,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaCaprese",
             nome: "Caprese Gourmet",
             preco: "38,90",
@@ -380,6 +391,7 @@ var produtos = {
         },
         {
             id: 11,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaMexicana",
             nome: "Mexicana Picante",
             preco: "39,90",
@@ -406,6 +418,7 @@ var produtos = {
         },
         {
             id: 12,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaAtum",
             nome: "Atum com Cebola Roxa",
             preco: "36,90",
@@ -432,6 +445,7 @@ var produtos = {
         },
         {
             id: 13,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaCheddar",
             nome: "Pepperoni com Cheddar",
             preco: "38,90",
@@ -458,6 +472,7 @@ var produtos = {
         },
         {
             id: 14,
+            categoria: categorias.dados[1].nome,
             foto: "../img/pizzaCarneSeca",
             nome: "Carne Seca com Catupiry",
             preco: "35,90",
@@ -484,10 +499,11 @@ var produtos = {
         },
         {
             id: 15,
+            categoria: categorias.dados[2].nome,
             foto: "../img/pizzaBaconAbacaxi",
-            nome: "Bacon com Abacaxi",
+            nome: "Chocolate com Abacaxi",
             preco: "34,90",
-            descricao: "A doçura do abacaxi contrasta perfeitamente com a crocância do bacon. Uma mistura de sabores que vai surpreender o seu paladar!",
+            descricao: "A doçura do chocolate contrasta perfeitamente com o abacaxi. Uma mistura de sabores que vai surpreender o seu paladar!",
             favorito: true,
             comentarios: [
                 { 
@@ -503,7 +519,7 @@ var produtos = {
                     nome: usuarios.dados[4].nome,
                     data: "13/02/2023",
                     titulo: "Pizza otima!",
-                    descricao: "Para os verdadeiros amantes de abacaxi e bacon!",
+                    descricao: "Para os verdadeiros amantes de abacaxi e chocolate!",
                     avaliacao: 4
                  }
             ]
@@ -512,6 +528,7 @@ var produtos = {
     bebidas: [
         {
             id: 1,
+            categoria: categorias.dados[5].nome,
             foto: "..img/cocaCola",
             preco: "14,99",
             nome: "Coca-cola 2L",
@@ -519,6 +536,7 @@ var produtos = {
         },
         {
             id: 2,
+            categoria: categorias.dados[5].nome,
             foto: "..img/guarana",
             preco: "17,99",
             nome: "Guaraná 2L",
@@ -526,6 +544,7 @@ var produtos = {
         },
         {
             id: 3,
+            categoria: categorias.dados[5].nome,
             foto: "..img/heineken",
             preco: "14,99",
             nome: "Cerveja Heineken",
@@ -533,6 +552,7 @@ var produtos = {
         },
         {
             id: 4,
+            categoria: categorias.dados[5].nome,
             foto: "..img/sprite",
             preco: "14,99",
             nome: "Sprite 2L",
@@ -540,6 +560,7 @@ var produtos = {
         },
         {
             id: 5,
+            categoria: categorias.dados[5].nome,
             foto: "..img/agua",
             preco: "4,99",
             nome: "Água Crystal",
@@ -555,15 +576,14 @@ module.exports = {
 }
 
 
-
+// Funcionando
 const getListaUsuarios = () => {
 
-    const ArrayJson = usuarios.dados 
+    const info = usuarios.dados 
     let usuariosA = []
     let usuariosJ = {} 
     
-
-    ArrayJson.forEach((dados) =>{
+    info.forEach((dados) =>{
        
         let dadosFinais = {
             id: dados.nome
@@ -573,10 +593,106 @@ const getListaUsuarios = () => {
 
     })
 
-    ArrayJson.usuarios = usuariosA
-    ArrayJson.quantidade = usuarios.dados.length
+    usuariosJ.dados = usuariosA
+    usuariosJ.usuarios = info.length
 
-   console.log(dados)
+   console.log(usuariosJ)
 
 }
-getListaUsuarios()
+//getListaUsuarios()
+
+const getListaPizza = () => {
+
+    const info = produtos.pizzas
+    let produtosA = []
+    let produtosJ = {}
+
+    info.forEach((dados) => {
+
+        let dadosFinais = {
+            id: dados.id,
+            categoria: dados.categoria,
+            nome: dados.nome,
+            descricao: dados.descricao,
+            preco: dados.preco
+        }
+
+        produtosA.push(dadosFinais)
+
+    })
+
+    produtosJ.dados = produtosA
+    produtosJ.quantidade = info.length
+
+    console.log(produtosJ)
+
+}
+// getListaPizza()
+
+// Funcionando
+const getListaBebidas = () => {
+
+    const info = produtos.bebidas
+    let produtosA = []
+    let produtosJ = {}
+
+    info.forEach((dados) => {
+
+        let dadosFinais = {
+            id: dados.id,
+            categoria: dados.categoria,
+            nome: dados.nome,
+            descricao: dados.descricao,
+            preco: dados.preco
+        }
+
+        produtosA.push(dadosFinais)
+
+    })
+
+    produtosJ.dados = produtosA
+    produtosJ.quantidade = info.length
+
+    console.log(produtosJ)
+
+}
+// getListaBebidas()
+
+const getEnderecoUsuarios = (clienteId) => {
+    const info = produtos.bebidas
+    let enderecoA = []
+    let enderecoJ = {}
+
+
+    clientesInfo.forEach((cliente) => {
+        if (cliente.id == clienteId) {
+            clienteEncontrado = cliente
+
+            cliente.endereco.forEach((endereco) => {
+                let enderecoClienteJSON = {
+                    cliente: cliente.nome,
+                    cep: endereco.cep,
+                    rua: endereco.rua,
+                    complemento: endereco.complemento,
+                    bairro: endereco.bairro,
+                    estado: endereco.estado,
+                }
+
+                enderecoArray.push(enderecoClienteJSON)
+            })
+        }
+    })
+
+    if (!clienteEncontrado) {
+        return {
+            mensagem: 'Cliente não encontrado',
+            endereco: [],
+            quantidade: 0,
+        }
+    }
+
+    enderecoJSON.endereco = enderecoArray
+    enderecoJSON.quantidade = enderecoArray.length
+
+    return enderecoJSON
+}
