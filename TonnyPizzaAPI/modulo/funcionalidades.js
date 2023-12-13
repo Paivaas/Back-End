@@ -83,34 +83,39 @@ const getListaBebidas = () => {
 }
 getListaBebidas()
 
-const getListarCategorias = () => {
 
-    const categoriaInfo = pizzaria.categorias.categoria
-    let categoriaArray = []
-    let categoriaJSON = {}
+const getListarSobremesas = () => {
 
-    categoriaInfo.forEach((categoria) => {
+    const info = dados.produtos.sobremesas
+    let produtosA = []
+    let produtosJ = {}
 
-        let categoriasJSON = {
-            id: categoria.id,
-            nome_categoria: categoria.nome_categoria
+    info.forEach((dados) => {
+
+        let dadosFinais = {
+            id: dados.id,
+            categoria: dados.categoria,
+            nome: dados.nome,
+            descricao: dados.descricao,
+            preco: dados.preco
         }
 
-        categoriaArray.push(categoriasJSON)
+        produtosA.push(dadosFinais)
 
     })
 
-    categoriaJSON.categoria = categoriaArray
-    categoriaJSON.quantidade = categoriaInfo.length
+    produtosJ.dados = produtosA
+    produtosJ.quantidade = info.length
 
-    return categoriaJSON
+    console.log(produtosJ)
 
 }
-
+getListarSobremesas()
 
 
 module.exports = {
     getListaUsuarios,
     getListaBebidas,
-    getListaPizza
+    getListaPizza,
+    getListarSobremesas
 }

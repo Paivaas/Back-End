@@ -566,6 +566,32 @@ var produtos = {
             nome: "Água Crystal",
             descricao: "Garrafa 500ml Embalagem Econômica"
         }
+    ],
+    sobremesas: [
+        {
+            id: 1,
+            categoria: categorias.dados[4].nome,
+            foto: "..img/Acai",
+            preco: "14,99",
+            nome: "Açai com cupuaçu",
+            descricao: "Pote de 400ml de açai com cupuaçu"
+        },
+        {
+            id: 2,
+            categoria: categorias.dados[4].nome,
+            foto: "..img/BananSplit",
+            preco: "17,99",
+            nome: "Banana Split",
+            descricao: " Banana cortada ao meio servida com o sabor de sorvete da sua preferencia."
+        },
+        {
+            id: 3,
+            categoria: categorias.dados[4].nome,
+            foto: "..img/Picole",
+            preco: "5,99",
+            nome: "Sorvete - picole",
+            descricao: "Sabores: Frutas tropicais e chocolate"
+        }
     ]
 }
 
