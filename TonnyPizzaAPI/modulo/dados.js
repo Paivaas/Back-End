@@ -116,7 +116,6 @@ var categorias = {
         }
     ]
 }
-console.log(categorias.dados[1].nome)
 var produtos = {
     pizzas: [
         {

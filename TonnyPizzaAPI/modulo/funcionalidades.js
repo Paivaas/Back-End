@@ -1,4 +1,4 @@
-var dados = require('../dados')
+var dados = require('./dados')
 
 // Funcionando
 const getListaUsuarios = () => {
@@ -83,7 +83,7 @@ const getListaBebidas = () => {
 }
 getListaBebidas()
 
-
+// Funcionando
 const getListarSobremesas = () => {
 
     const info = dados.produtos.sobremesas
@@ -113,9 +113,38 @@ const getListarSobremesas = () => {
 getListarSobremesas()
 
 
+// Funcinando
+const getListarCategorias = () => {
+
+    const info = dados.categorias.dados
+    let categoriasA = []
+    let categoriasJ = {}
+
+    info.forEach((dados) => {
+
+        let dadosFinais = {
+            id: dados.id,
+            nome: dados.nome,
+            foto: dados.foto
+        }
+
+        categoriasA.push(dadosFinais)
+
+    })
+
+    categoriasJ.dados = categoriasA
+    categoriasJ.quantidade = info.length
+
+    console.log(categoriasJ)
+
+}
+getListarCategorias()
+
+
 module.exports = {
     getListaUsuarios,
     getListaBebidas,
     getListaPizza,
-    getListarSobremesas
+    getListarSobremesas,
+    getListarCategorias
 }
